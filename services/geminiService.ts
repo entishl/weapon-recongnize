@@ -44,6 +44,8 @@ export const identifyWeapons = async (arsenalImageBase64: string, userImageBase6
         5. The values must be integers representing the count.
         6. If a weapon from the arsenal is not found in the screenshot, its count must be 0.
         7. You must provide a count for all 18 weapon slots from the arsenal grid, even if the count is 0.
+        8. You only need to return a JSON object, and must not contain any other content.
+
     `;
 
     const arsenalImagePart = {
