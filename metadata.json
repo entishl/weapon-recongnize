@@ -1,0 +1,5 @@
+{
+  "name": "Weapon Recognition Tool",
+  "description": "An advanced image recognition tool that uses AI to identify weapons in game screenshots by comparing them against a predefined weapon arsenal. It returns the coordinates of the identified weapons from the arsenal grid.",
+  "requestFramePermissions": []
+}
