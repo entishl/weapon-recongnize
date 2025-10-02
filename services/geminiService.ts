@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import type { WeaponCount } from '../types';
 
@@ -63,11 +62,16 @@ export const identifyWeapons = async (arsenalImageBase64: string, userImageBase6
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-2.5-pro',
             contents: { parts: [{ text: prompt }, arsenalImagePart, userImagePart] },
             config: {
                 responseMimeType: "application/json",
                 responseSchema: responseSchema,
+                temperature: 0.1,
+                topP: 0.95,
+                topK: 64,
+                maxOutputTokens: 512,
+                thinkingConfig: { thinkingBudget: 256 },
             },
         });
 
