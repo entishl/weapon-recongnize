@@ -69,7 +69,7 @@ export const identifyWeapons = async (arsenalImageBase64: string, userImageBase6
             config: {
                 responseMimeType: "application/json",
                 responseSchema: responseSchema,
-                temperature: 0.1,
+                temperature: 0.2,
                 topP: 0.95,
                 topK: 64,
                 maxOutputTokens: 512,
